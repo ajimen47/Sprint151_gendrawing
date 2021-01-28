@@ -19,7 +19,7 @@ function setup() {
     if (mouseIsPressed) {
         
         frameRate(15);
-        fill(random(0,255),random(0,255),random(0,255),random(50,255));
+        fill(random(0,255),random(0,255),random(0,255),random(50,225));
         triangle(mouseX, mouseY, random(0,windowWidth), random(0,windowHeight), random(0,windowWidth), random(0,windowHeight));
         
       } else {
@@ -27,10 +27,10 @@ function setup() {
         fill(random(0,255),random(0,255),random(0,255),50);
         for (let x = 1; x < 70; x++) {
           for (let y = 1; y < 70; y++) {
-            let ray = random(230,255)
+            let ray = random(150,255)
             stroke(ray, ray,random(50));
             strokeWeight(random(5));
-            line(windowWidth/2,windowHeight/2, random(0,windowWidth), random(0,windowHeight));
+            line(mouseX,mouseY, random(0,windowWidth), random(0,windowHeight));
           }
         }
         
