@@ -18,9 +18,9 @@ function setup() {
  
     if (mouseIsPressed) {
         
-        frameRate(15);
+        frameRate(13);
         //strokeWeight(2);
-        fill(random(0,255),random(0,255),random(0,255),random(50,225));
+        fill(random(0,255),random(0,255),random(0,255),100);
         triangle(mouseX, mouseY, random(0,windowWidth), random(0,windowHeight), random(0,windowWidth), random(0,windowHeight));
         
       } else {
@@ -30,7 +30,7 @@ function setup() {
           for (let y = 1; y < 40; y++) {
             let ray = random(150,255)
             stroke(ray, ray,random(50));
-            strokeWeight(random(1));
+            strokeWeight(1);
             line(mouseX,mouseY, random(0,windowWidth), random(0,windowHeight));
             
           }
