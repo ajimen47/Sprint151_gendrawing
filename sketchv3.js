@@ -28,7 +28,7 @@ function setup() {
         fill(random(0,255),random(0,255),random(0,255),10);
         for (let x = 1; x < 40; x++) {
           for (let y = 1; y < 40; y++) {
-            let ray = random(150,255)
+            let ray = random(150,255);
             stroke(ray, ray,random(50));
             strokeWeight(1);
             line(mouseX,mouseY, random(0,windowWidth), random(0,windowHeight));
