@@ -3,9 +3,21 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   //frameRate(30);
   
+    msg = 'This project is titled: Living in Light\n'
+    msg+= '\n'
+    msg+= 'The project has a center point where many lines come out of.\n'
+    msg+= '\n'
+    msg+= 'Holding down on the mouse will make triangles appear with one vertici sharing the same coordinates as the mouse.\n'
+    msg+= '\n'
+    msg+= 'In changing the paramaters for the making of the lines I was able to create texture.\n'
+    msg+= 'The blendmode(diffrence) makes colors colide and sometimes make interesting intersections.\n'
+    msg+= 'The rectangles that appear at the center of the mouse look like lasers and add dimensions.\n'
+    msg+= "Go crazy with the mouse!\n"
+    msg+= 'Created by Antonio Jimenez'
+    alert(msg);
   blendMode(DIFFERENCE);
   colorMode(HSB, 255);
-
+  noCursor()
 
 }
 
@@ -31,12 +43,12 @@ function draw() {
 
   } else {
     frameRate(10);
-    fill(random(0, 255), random(0, 255), random(0, 255), 10);
-    for (let x = 1; x < 40; x++) {
-      for (let y = 30; y < 40; y++) {
+    //fill(random(0, 255), random(0, 255), random(0, 255), 10);
+    for (let x = 1; x < 30; x++) {
+      for (let y = 1; y < 30; y++) {
         let ray = random(150, 255);
         stroke(ray, ray, random(50));
-        strokeWeight(1);
+        strokeWeight(random(1, 2));
         line(mouseX, mouseY, random(0, windowWidth), random(0, windowHeight));
         //erase();
         //noErase();
@@ -50,12 +62,13 @@ function draw() {
   }
   redraw();
   rectMode(CENTER);
-  fill(random(0, 255), random(0, 255), random(0, 255), 255);
-  strokeWeight(3);
+  //stroke(random(0, 255), random(0, 255), random(0, 255), 255);
+  stroke(255, 255, 255, random(150, 255));
+  strokeWeight(random(3));
   noFill();
-  rect(mouseX, mouseY,random(0, windowWidth), random(0, windowHeight));
+  rect(mouseX, mouseY, random(0, windowWidth), random(0, windowHeight));
   //triangle(random(0, windowWidth), random(0, windowHeight), random(0, windowWidth), random(0, windowHeight), random(0, windowWidth), random(0, windowHeight));
-
+  noErase();
 
 }
 
